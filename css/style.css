@@ -1,0 +1,121 @@
+/* 
+#f4f4f4
+#ff7315
+#3a3535
+#232020
+*/
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #b8c6db;
+background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5, {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                            supported by Chrome, Opera and Firefox */
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Squada One',  'arial';
+}
+
+#navbar {
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #232020;
+}
+.navbar-light .navbar-nav .active .nav-link {
+    color: #ff7315;
+    font-weight: bold;
+}
+
+
+#about-us {
+    background-image: url('../img/bg.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: bottom right;
+    height: 100vh;
+}
+#the-team .card{
+    height: 300px;
+    border: 0 !important;
+    border-right: 2px solid white;
+}
+#the-team .name {
+    position: absolute;
+}
+
+
+#the-team .card-body {
+    background-size: cover;
+    transition: all 0.5s linear;
+    cursor: pointer;
+}
+
+#nikko {
+    background-image: url('../img/team/nikko-orange.jpg');
+}
+#darnell {
+    background-image: url('../img/team/darnell-orange.jpg');
+}
+#jeremiah {
+    background-image: url('../img/team/jeremiah-orange.jpg');
+}
+
+
+
+#nikko:hover {
+    background-image: url('../img/team/nikko.jpg');
+}
+#darnell:hover {
+    background-image: url('../img/team/darnell.jpg');
+}
+#jeremiah:hover {
+    background-image: url('../img/team/jeremiah.jpg');
+}
+
+@media screen and (max-width: 576px) {
+    #about-us {
+        background-size: 80%;
+    }   
+}
+.bg-dark {
+    background-color: #232020;
+}
+.bg-primary {
+    background-color: #ff7315 !important;
+}
+.text-primary {
+    color: #ff7315 !important;
+}
+.text-secondary {
+    color: #3a3535 !important;
+}
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.text-anim {
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 0 auto 0 auto;
+}
