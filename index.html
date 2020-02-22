@@ -1,88 +1,144 @@
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-        <style>
-            #navbar {
-                background-color:transparent !important;
-                background-color: #ec9f05 !important;
-                box-shadow:-10px 5px 10px rgba(0,0,0,0.5);
-            }
 
-            #wrapper {
-                background-color:#ff4e00;
-                background-image:linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
-                border-bottom-right-radius: 10%;
-            }
-            #banner {
-                background-image: url('img/bg.png');
-                /* background-color: #2a2a72;
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        body {
+            background-color: #ff4e00;
+            background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+        }
+
+        #navbar {
+            background-color: transparent !important;
+            background-color: #ec9f05 !important;
+            box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #wrapper {
+            background-color: #ff4e00;
+            background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+            /* border-bottom-right-radius: 10%; */
+        }
+
+        #banner {
+            background-image: url('img/bg.png');
+            /* background-color: #2a2a72;
                 background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%); */
-                background-size: cover;
-                width: 100%;
-                background-attachment: fixed;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;  
-                border-bottom-right-radius: 10%;
-            }
-            h1 {
-                font-family: 'Bebas Neue';
-                text-shadow: 0px 4px 0px rgba(0,0,0,0.5);
-            }
-        </style>
-    </head>
-    <body>
-        
-        <nav class="navbar navbar-expand-lg navbar-light bg-light p-1" id="navbar">
-            <a class="navbar-brand" href="#">
-                <img class="img-fluid d-md-none" src="img/logo.jpg" alt="" width="150">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto text-capitalize">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Why Vote in OHA</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">About Keliʻi Akina</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Videos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Donate</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Volunteer and get stuff</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        
+            width: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-bottom-right-radius: 10%;
+        }
 
-        <!--BANNER-->
-        <div class="pb-5" id="wrapper">
+        h1,
+        .title {
+            font-family: 'Bebas Neue';
+        }
+
+        .content-img {
+            width: 100%;
+        }
+
+        .content-wrapper {
+            height: 100vh !important;
+            position: relative;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .white-filter {
+            background-color: rgba(255, 255, 255, 0.85);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .bg-content1 {
+            background-image: url('img/bg-content1.png');
+        }
+
+        .bg-content1,
+        .bg-content1 .white-filter {
+            border-bottom-left-radius: 10%;
+        }
+
+        .bg-content2 {
+            background-image: url('img/bg-content2.png');
+            border-bottom-right-radius: 10%;
+        }
+
+        .bg-content2,
+        .bg-content2 .white-filter {
+            border-bottom-right-radius: 10%;
+        }
+
+        .social-buttons {
+            width: 35px;
+            height: 35px;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-1" id="navbar">
+        <a class="navbar-brand" href="#">
+            <img class="img-fluid d-md-none" src="img/logo.jpg" alt="" width="150">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto text-capitalize">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Why Vote in OHA</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">About Keliʻi Akina</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Volunteer and get stuff</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--BANNER-->
+    <div class="pb-5" id="wrapper">
         <div class="container-fluid d-flex align-items-center" id="banner">
             <div class="container ">
-                
+
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
-                        
+
                         <img class="img-fluid d-none d-md-block mt-3" src="img/akina.png" alt="" width="500">
 
                     </div>
                     <div class="col-md-6 align-items-center">
                         <h1 class="text-white display-2 mt-5 mb-0 text-uppercase">Keliʻi Akina, Ph.D.</h1>
-                        <h1 class="font-weight-bold text-uppercase text-white" style="margin-top: -15px;">"E Hana Kākou" - Let's work together! </h1>
+                        <h1 class="font-weight-bold text-uppercase text-white" style="margin-top: -15px;">"E Hana Kākou"
+                            - Let's work together! </h1>
                         <div class="mt-2 btn-group btn-group-lg" role="group" aria-label="Basic example">
                             <button class="btn btn-outline-light">
                                 <i class="fab fa-facebook"></i>
@@ -94,13 +150,110 @@
                                 <i class="fas fa-graduation-cap"></i>
                             </button>
                         </div>
-                       
-                        
+
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
-    </body>
+    <div class="content-wrapper bg-content1 mb-5">
+        <div class="white-filter"></div>
+        <div class="container">
+            <div class="row content-body">
+                <div class="col col-md-6 col-sm-12 my-5">
+                    <img src="img\1.png" class="content-img d-none d-lg-block" alt="">
+                </div>
+                <div class="col col-lg-6 col-md-12 col-sm-12 mt-5 pl-5">
+                    <h1 class="text-dark text-uppercase display-4">A Great Leader</h1>
+                    <h5 class="text-dark">
+                        Keliʻi Akina, Ph.D., is a leader who is transforming Hawaii's economy, government and society.
+                        He is known for the phrase he coined, "E Hana Kākou" - Let's work together! Over the past
+                        several years as a public policy adviser at the legislative, congressional and international
+                        levels, Dr. Akina has become a leading defender of the Aloha Spirit. His mission is to preserve
+                        the Aloha Spirit by which Hawaiians and people of all races are welcomed and encouraged to work
+                        together for a better future.
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-wrapper bg-content2 mb-5">
+        <div class="white-filter" id="blue"></div>
+        <div class="container">
+            <div class="row content">
+                <div class="col col-lg-6 col-md-12 col-sm-12 my-5 pr-5">
+                    <h1 class="text-dark text-uppercase display-4">A Native Hawaiian and Skilled Chanter</h1>
+                    <h5 class="text-dark">
+                        As a Native Hawaiian and skilled chanter, Dr. Akina has dedicated his life to the education and
+                        financial advancement of both Hawaiians and all people in the islands, starting in the 1980's as
+                        the director of Youth for Christ on the Wai`anae and Nanakuli coast. His plans for Hawaii's
+                        economy and future are based on the conviction that the only way to raise the water level of one
+                        boat is to raise the water level of all boats.
+                    </h5>
+                </div>
+                <div class="col col-md-6 mt-5">
+                    <img src="img\2.png" class="content-img d-none d-lg-block" alt="" style="height: 50vh;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue bg-dark text-white">
+        <div class="container-fluid">
+            <div class="row pl-3 pt-2">
+                <h6>Connect with Dr. Akina:</h6>
+            </div>
+            <div class="row pl-3">
+                <button type="button" class="btn btn-outline-light rounded-circle social-buttons mr-2"><i
+                        class="fab fa-twitter"></i></button>
+                <button type="button" class="btn btn-outline-light rounded-circle social-buttons mr-2"><i
+                        class="fab fa-facebook-f"></i></button>
+                <button type="button" class="btn btn-outline-light rounded-circle social-buttons mr-2"><i
+                        class="fab fa-instagram"></i></button>
+                <button type="button" class="btn btn-outline-light rounded-circle social-buttons mr-2"><i
+                        class="fas fa-envelope"></i></button>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-black">
+                    <p>&copy All Right Reserved.</p>
+                </div>
+                </hr>
+            </div>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    <!--Footer-->
+    <!-- <section id="footer">
+        <div class="container">
+            <div class="row text-center text-xs-center text-sm-left text-md-left mt-3">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <p>"E Hana Kākou" - Let's work together!</p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <p>Quick Video</p>
+                    <iframe width="350" height="200" src="https://www.youtube.com/embed/R6lH1yUdsnU" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-black">
+                    <p class="h6">&copy All right Reversed.</p>
+                </div>
+                </hr>
+            </div>
+        </div>
+    </section> -->
+    <!--Footer-->
+    <script>
+        AOS.init();
+    </script>
+</body>
+
 </html>
