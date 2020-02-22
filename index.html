@@ -7,26 +7,19 @@
         <style>
             #navbar {
                 background-color:transparent !important;
+                background-color: #ec9f05 !important;
+                box-shadow:-10px 5px 10px rgba(0,0,0,0.5);
             }
 
-            .navbar-light .navbar-nav .nav-link {
-                color: rgba(255,255,255);
-                font-weight: light;
-                
-            }
-            .navbar-light .navbar-nav .active>.nav-link {
-                color: white;
-                border: 1px solid white;
-                font-weight: bold;
-            }
             #wrapper {
                 background-color:#ff4e00;
                 background-image:linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
                 border-bottom-right-radius: 10%;
             }
             #banner {
-                background-color: #2a2a72;
-                background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+                background-image: url('img/bg.png');
+                /* background-color: #2a2a72;
+                background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%); */
                 background-size: cover;
                 width: 100%;
                 background-attachment: fixed;
@@ -43,33 +36,33 @@
     </head>
     <body>
         
-        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 d-block d-md-none" id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-1" id="navbar">
             <a class="navbar-brand" href="#">
-                <img class="img-fluid" src="img/logo.jpg" alt="" width="150">
+                <img class="img-fluid d-md-none" src="img/logo.jpg" alt="" width="150">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ml-auto text-capitalize">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">WHY VOTE IN OHA</a>
+                        <a class="nav-link" href="#">Why Vote in OHA</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">ABOUT KELIʻI AKINA</a>
+                        <a class="nav-link" href="#">About Keliʻi Akina</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">VIDEOS</a>
+                        <a class="nav-link" href="#">Videos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">NEWS</a>
+                        <a class="nav-link" href="#">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">DONATE</a>
+                        <a class="nav-link" href="#">Donate</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">VOLUNTEER OR GET STUFF!</a>
+                        <a class="nav-link" href="#">Volunteer and get stuff</a>
                     </li>
                 </ul>
             </div>
@@ -80,43 +73,15 @@
         <div class="pb-5" id="wrapper">
         <div class="container-fluid d-flex align-items-center" id="banner">
             <div class="container ">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 d-none d-md-block" id="navbar">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">WHY VOTE IN OHA</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">ABOUT KELIʻI AKINA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">VIDEOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">NEWS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">DONATE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">VOLUNTEER OR GET STUFF!</a>
-                        </li>
-                        </ul>
-                        
-                    </div>
-                </nav>
+                
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
                         
-                        <img class="img-fluid d-none d-md-block" src="img/akina.png" alt="" width="500">
+                        <img class="img-fluid d-none d-md-block mt-3" src="img/akina.png" alt="" width="500">
 
                     </div>
                     <div class="col-md-6 align-items-center">
-                        <h1 class="text-white mt-5 mb-0 text-uppercase">Keliʻi Akina, Ph.D.</h1>
+                        <h1 class="text-white display-2 mt-5 mb-0 text-uppercase">Keliʻi Akina, Ph.D.</h1>
                         <h1 class="font-weight-bold text-uppercase text-white" style="margin-top: -15px;">"E Hana Kākou" - Let's work together! </h1>
                         <div class="mt-2 btn-group btn-group-lg" role="group" aria-label="Basic example">
                             <button class="btn btn-outline-light">
