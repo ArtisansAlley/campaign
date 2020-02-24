@@ -12,19 +12,15 @@
             background-color: #ff4e00;
             background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
         }
-
         #navbar {
             background-color: transparent !important;
             background-color: #ec9f05 !important;
-            box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.5);
         }
-
         #wrapper {
             background-color: #ff4e00;
             background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
             /* border-bottom-right-radius: 10%; */
         }
-
         #banner {
             background-image: url('img/bg.png');
             /* background-color: #2a2a72;
@@ -36,51 +32,42 @@
             background-size: cover;
             border-bottom-right-radius: 10%;
         }
-
         h1,
         .title {
             font-family: 'Bebas Neue';
         }
-
         .content-img {
             width: 100%;
         }
-
         .content-wrapper {
-            height: 100vh !important;
+            /* height: 100vh !important; */
             position: relative;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
-
         .white-filter {
             background-color: rgba(255, 255, 255, 0.85);
             position: absolute;
             width: 100%;
             height: 100%;
         }
-
         .bg-content1 {
-            background-image: url('img/bg-content1.png');
+            //background-image: url('img/bg-content1.png');
         }
-
         .bg-content1,
         .bg-content1 .white-filter {
             border-bottom-left-radius: 10%;
         }
-
         .bg-content2 {
-            background-image: url('img/bg-content2.png');
+           // background-image: url('img/bg-content2.png');
             border-bottom-right-radius: 10%;
         }
-
         .bg-content2,
         .bg-content2 .white-filter {
             border-bottom-right-radius: 10%;
         }
-
         .social-buttons {
             width: 35px;
             height: 35px;
@@ -92,35 +79,37 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-1" id="navbar">
-        <a class="navbar-brand" href="#">
-            <img class="img-fluid d-md-none" src="img/logo.jpg" alt="" width="150">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto text-capitalize">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Why Vote in OHA</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">About Keliʻi Akina</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Videos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Donate</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Volunteer and get stuff</a>
-                </li>
-            </ul>
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="img-fluid d-md-none" src="img/logo.jpg" alt="" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto text-capitalize">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Why Vote in OHA</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">About Keliʻi Akina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Volunteer and get stuff</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -161,10 +150,10 @@
         <div class="white-filter"></div>
         <div class="container">
             <div class="row content-body">
-                <div class="col col-md-6 col-sm-12 my-5">
-                    <img src="img\1.png" class="content-img d-none d-lg-block" alt="">
+                <div class="col-md-6 col-sm-12 my-5 d-none d-lg-block">
+                    <img src="img\1.png" class="content-img " alt="">
                 </div>
-                <div class="col col-lg-6 col-md-12 col-sm-12 mt-5 pl-5">
+                <div class="col-lg-6 col-md-12 col-sm-12 mt-5 pl-5">
                     <h1 class="text-dark text-uppercase display-4">A Great Leader</h1>
                     <h5 class="text-dark">
                         Keliʻi Akina, Ph.D., is a leader who is transforming Hawaii's economy, government and society.
@@ -183,7 +172,7 @@
         <div class="white-filter" id="blue"></div>
         <div class="container">
             <div class="row content">
-                <div class="col col-lg-6 col-md-12 col-sm-12 my-5 pr-5">
+                <div class="col-lg-6 col-md-12 col-sm-12 my-5 pr-5">
                     <h1 class="text-dark text-uppercase display-4">A Native Hawaiian and Skilled Chanter</h1>
                     <h5 class="text-dark">
                         As a Native Hawaiian and skilled chanter, Dr. Akina has dedicated his life to the education and
