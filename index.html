@@ -8,6 +8,17 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
+
+        @media (max-width: 720px) {
+            #banner {
+                padding-bottom: 20px;
+            }
+            #banner .display-2{
+               line-height:0.8;
+               margin-bottom: 30px !important;
+            }
+        }
+
         body {
             background-color: #ff4e00;
             background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
@@ -15,11 +26,9 @@
         #navbar {
             background-color: transparent !important;
             background-color: #ec9f05 !important;
+            font-weight: bold !important;
         }
         #wrapper {
-            background-color: #ff4e00;
-            background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
-            /* border-bottom-right-radius: 10%; */
         }
         #banner {
             background-image: url('img/bg.png');
@@ -53,15 +62,11 @@
             width: 100%;
             height: 100%;
         }
-        .bg-content1 {
-            //background-image: url('img/bg-content1.png');
-        }
         .bg-content1,
         .bg-content1 .white-filter {
             border-bottom-left-radius: 10%;
         }
         .bg-content2 {
-           // background-image: url('img/bg-content2.png');
             border-bottom-right-radius: 10%;
         }
         .bg-content2,
@@ -78,7 +83,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light p-1" id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img class="img-fluid d-md-none" src="img/logo.jpg" alt="" width="150">
@@ -119,14 +124,14 @@
             <div class="container ">
 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-md-6 d-none d-lg-block">
 
-                        <img class="img-fluid d-none d-md-block mt-3" src="img/akina.png" alt="" width="500">
+                        <img class="img-fluid  mt-3" src="img/akina.png" alt="" width="500">
 
                     </div>
                     <div class="col-md-6 align-items-center">
                         <h1 class="text-white display-2 mt-5 mb-0 text-uppercase">Keliʻi Akina, Ph.D.</h1>
-                        <h1 class="font-weight-bold text-uppercase text-white" style="margin-top: -15px;">"E Hana Kākou"
+                        <h1 class="font-weight-bold text-uppercase text-white" style="margin-top: -15px;" id="tagline">"E Hana Kākou"
                             - Let's work together! </h1>
                         <div class="mt-2 btn-group btn-group-lg" role="group" aria-label="Basic example">
                             <button class="btn btn-outline-light">
@@ -146,6 +151,12 @@
         </div>
     </div>
 
+    <!-- <div class="container" style="height:100vh">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div> -->
+
     <div class="content-wrapper bg-content1 mb-5">
         <div class="white-filter"></div>
         <div class="container">
@@ -153,9 +164,9 @@
                 <div class="col-md-6 col-sm-12 my-5 d-none d-lg-block">
                     <img src="img\1.png" class="content-img " alt="">
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 mt-5 pl-5">
+                <div class="col-lg-6 col-md-12 col-sm-12 mt-5 pl-sm-0 pl-lg-5">
                     <h1 class="text-dark text-uppercase display-4">A Great Leader</h1>
-                    <h5 class="text-dark">
+                    <h5 class="text-dark mb-5">
                         Keliʻi Akina, Ph.D., is a leader who is transforming Hawaii's economy, government and society.
                         He is known for the phrase he coined, "E Hana Kākou" - Let's work together! Over the past
                         several years as a public policy adviser at the legislative, congressional and international
@@ -172,7 +183,7 @@
         <div class="white-filter" id="blue"></div>
         <div class="container">
             <div class="row content">
-                <div class="col-lg-6 col-md-12 col-sm-12 my-5 pr-5">
+                <div class="col-lg-6 col-md-12 col-sm-12 my-5 pr-sm-0 pr-lg-5">
                     <h1 class="text-dark text-uppercase display-4">A Native Hawaiian and Skilled Chanter</h1>
                     <h5 class="text-dark">
                         As a Native Hawaiian and skilled chanter, Dr. Akina has dedicated his life to the education and
@@ -182,8 +193,8 @@
                         boat is to raise the water level of all boats.
                     </h5>
                 </div>
-                <div class="col col-md-6 mt-5">
-                    <img src="img\2.png" class="content-img d-none d-lg-block" alt="" style="height: 50vh;">
+                <div class="col col-md-6 mt-5 d-none d-lg-block">
+                    <img src="img\2.png" class="content-img " alt="" >
                 </div>
             </div>
         </div>
@@ -217,29 +228,9 @@
 
     </footer>
     <!-- Footer -->
-    <!--Footer-->
-    <!-- <section id="footer">
-        <div class="container">
-            <div class="row text-center text-xs-center text-sm-left text-md-left mt-3">
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <p>"E Hana Kākou" - Let's work together!</p>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <p>Quick Video</p>
-                    <iframe width="350" height="200" src="https://www.youtube.com/embed/R6lH1yUdsnU" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-black">
-                    <p class="h6">&copy All right Reversed.</p>
-                </div>
-                </hr>
-            </div>
-        </div>
-    </section> -->
-    <!--Footer-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
     <script>
         AOS.init();
     </script>
