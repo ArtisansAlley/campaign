@@ -177,7 +177,6 @@
             </div>   
         </nav>
 
-
         <div id="banner">
             <!-- The video -->
             <video class="lazy" autoplay muted loop id="myVideo" data-poster="img/poster.png">
@@ -230,7 +229,7 @@
                     <div class="img">
                         <div class="overlay"></div>
                     </div>
-                    <div class="card-body rounded-0">
+                    <div class="card-body">
                         <h1>Lorem Ipsum</h1>
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
                     </div>
@@ -246,9 +245,6 @@
                 </div>
             </div>
         </div>
-
-       
-
     </body>
 
     <script src="js/swiper.js"></script>
@@ -294,18 +290,26 @@
                 }
             });
 
-            
+            $navbar = $('#navbar');
+   
+                   
             $(document).scroll(function() {
                 var scrollTop = $(this).scrollTop();
                 var lpNavHeight = $('#lp-nav').outerHeight();
-                $navbar = $('#navbar');
+                
 
-                if (scrollTop >= lpNavHeight ) {
-                    $navbar.slideDown(); 
-                } else {
-                    $navbar.slideUp();
+                if ( clientWidth < 768 ) {
+                    if (scrollTop >= lpNavHeight ) {
+                        $navbar.slideDown(); 
+                    } else {
+                        $navbar.slideUp();
+                    }
                 }
             });
+            if ( clientWidth <= 768 ) {
+                $navbar.slideDown();
+                $(document).off('scroll');
+            }     
 
         })
     </script>
