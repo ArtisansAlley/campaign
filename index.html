@@ -4,103 +4,310 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
         <style>
-            #navbar {
-                background-color:transparent !important;
-                background-color: #ec9f05 !important;
-                box-shadow:-10px 5px 10px rgba(0,0,0,0.5);
+
+            #lp-nav {
+                z-index: 1029;
+            }
+            .navbar-light .navbar-nav .nav-link {
+                font-weight: bold;
+                color: rgba(0,0,0,.9);
+            }
+            .navbar-light .navbar-nav .active>.nav-link {
+                background-color: #0D4F8B;
+                color: white
             }
 
-            #wrapper {
-                background-color:#ff4e00;
-                background-image:linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
-                border-bottom-right-radius: 10%;
+
+            .no-gutters {
+                margin-right: 0;
+                margin-left: 0;
             }
-            #banner {
-                background-image: url('img/bg.png');
-                /* background-color: #2a2a72;
-                background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%); */
-                background-size: cover;
+            .col,
+            .col[class*="col-"] {
+                padding-right: 0;
+                padding-left: 0;
+            }
+
+            .img {
+                position: relative;
+                height: 250px;
                 width: 100%;
-                background-attachment: fixed;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;  
-                border-bottom-right-radius: 10%;
+                background-image: url('https://d3n8a8pro7vhmx.cloudfront.net/keliiakina/pages/169/attachments/original/1466599396/Aiona_Akina1.png?1466599396');
+                background-size: cover;
             }
-            h1 {
-                font-family: 'Bebas Neue';
-                text-shadow: 0px 4px 0px rgba(0,0,0,0.5);
+            .overlay {
+                position: absolute;
+                top: 0;
+                left:0;
+                right:0;
+                bottom:0; 
             }
+            @media (max-width: 425px) {
+                .img {
+                    height: 200px;
+                }
+            }
+            .bg-primary .overlay {
+                background-color: rgba(13,79,139,0.8);
+            }
+            .bg-secondary .overlay {
+                background-color: rgb(255,25,25,0.8);
+            }
+            .bg-dark .overlay,
+            .bg-black .overlay {
+                background-color: rgb(0,0,0,0.8);
+            }   
+
+            .bg-primary {
+                background-color: #0D4F8B	 !important;
+            }
+            .bg-secondary {
+                background-color: #ff1919 !important;
+            }
+            .bg-black {
+                background-color:#222;
+            }
+            .card {
+                border-radius: 0 !important;
+            }
+            
+            .swiper-wrapper {
+                height: auto !important;
+            }
+
+            #next,
+            #prev {
+                position: absolute;
+                z-index: 999999;
+                top: 50%;
+            }
+            #next {
+                right: 0;
+                margin-right: 10px;
+            }
+            #prev {
+                left: 0;
+                margin-left: 10px;
+            }
+
+            #banner {
+                width: 100%;
+            }
+            #myVideo {
+                width: 100%;
+                margin-top: -100px;
+            }
+            @media (max-width: 425px) {
+                #myVideo {
+                    margin-top: 0;
+                }
+            }
+
         </style>
     </head>
     <body>
-        
-        <nav class="navbar navbar-expand-lg navbar-light bg-light p-1" id="navbar">
-            <a class="navbar-brand" href="#">
-                <img class="img-fluid d-md-none" src="img/logo.jpg" alt="" width="150">
-            </a>
+
+        <!-- LANDING PAGE NAV -->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0,0,0,0)" id="lp-nav">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
             </button>
             
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto text-capitalize">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Why Vote in OHA</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">About Keliʻi Akina</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Videos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Donate</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Volunteer and get stuff</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active text-uppercase">
+                            <a class="nav-link " href="#">WHY VOTE IN OHA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">ABOUT KELIʻI AKINA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">VIDEOS</a>
+                        </li>                        
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">NEWS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">DONATE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">VOLUNTEER OR GET STUFF</a>
+                        </li>
+                    </ul>
+                </div>
         
+        </nav>
 
-        <!--BANNER-->
-        <div class="pb-5" id="wrapper">
-        <div class="container-fluid d-flex align-items-center" id="banner">
-            <div class="container ">
-                
-                <div class="row">
-                    <div class="col-sm-6 col-md-6">
-                        
-                        <img class="img-fluid d-none d-md-block mt-3" src="img/akina.png" alt="" width="500">
+        <!-- ON SCROLL NAV -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar" style="display:none">
+            <a href="" class="navbar-brand">
+                <img src="img/logo.png" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active text-uppercase">
+                            <a class="nav-link " href="#">WHY VOTE IN OHA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">ABOUT KELIʻI AKINA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">VIDEOS</a>
+                        </li>                        
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">NEWS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">DONATE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">VOLUNTEER OR GET STUFF</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>   
+        </nav>
 
+
+        <div id="banner">
+            <!-- The video -->
+            <video class="lazy" autoplay muted loop id="myVideo" data-poster="img/poster.png">
+                <source data-src="img/For Web-1.webm" type="video/mp4">
+            </video>
+        </div>
+
+
+        <div class="swiper-container">
+            <button class="btn btn-lg btn-outline-light " id="prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="btn btn-lg btn-outline-light " id="next"><i class="fas fa-chevron-right"></i></button>
+            <div class="swiper-wrapper text-white">
+                <div class="card bg-primary border-0 swiper-slide">
+                    <div class="img">
+                        <div class="overlay"></div>
                     </div>
-                    <div class="col-md-6 align-items-center">
-                        <h1 class="text-white display-2 mt-5 mb-0 text-uppercase">Keliʻi Akina, Ph.D.</h1>
-                        <h1 class="font-weight-bold text-uppercase text-white" style="margin-top: -15px;">"E Hana Kākou" - Let's work together! </h1>
-                        <div class="mt-2 btn-group btn-group-lg" role="group" aria-label="Basic example">
-                            <button class="btn btn-outline-light">
-                                <i class="fab fa-facebook"></i>
-                            </button>
-                            <button class="btn btn-outline-light">
-                                <i class="fas fa-envelope"></i>
-                            </button>
-                            <button class="btn btn-outline-light">
-                                <i class="fas fa-graduation-cap"></i>
-                            </button>
-                        </div>
-                       
-                        
+                    <div class="card-body">
+                        <h1>Lorem Ipsum</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-0 swiper-slide">
+                    <div class="img">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-body">
+                        <h1>Lorem Ipsum</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
+                    </div>
+                </div>
+                <div class="card bg-primary border-0 swiper-slide">
+                    <div class="img">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-body rounded-0">
+                        <h1>Lorem Ipsum</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-0 swiper-slide">
+                    <div class="img">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-body">
+                        <h1>Lorem Ipsum</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
+                    </div>
+                </div>
+                <div class="card bg-primary border-0 swiper-slide">
+                    <div class="img">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-body rounded-0">
+                        <h1>Lorem Ipsum</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
+                    </div>
+                </div>
+                <div class="card bg-secondary border-0 swiper-slide">
+                    <div class="img">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-body">
+                        <h1>Lorem Ipsum</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+
+       
 
     </body>
+
+    <script src="js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@13.0.1/dist/lazyload.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            var lazyLoadInstance = new LazyLoad({
+                elements_selector: ".lazy"
+            });
+
+            //SWIPER
+            
+            // Fix slidesper view based on screen size
+            clientWidth = $(document).outerWidth();
+            
+            // for mobile
+            if ( clientWidth <= 425 ) {
+                slidesPerView = 1;
+            }
+            // for tablet
+            else if ( clientWidth > 425 && clientWidth <= 768 ) {
+                slidesPerView = 2;
+            }
+            else {
+                slidesPerView = 3;
+            }
+
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: slidesPerView,
+                spaceBetween: 0,
+                simulateTouch: false,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '#next',
+                    prevEl: '#prev',
+                }
+            });
+
+            
+            $(document).scroll(function() {
+                var scrollTop = $(this).scrollTop();
+                var lpNavHeight = $('#lp-nav').outerHeight();
+                $navbar = $('#navbar');
+
+                if (scrollTop >= lpNavHeight ) {
+                    $navbar.slideDown(); 
+                } else {
+                    $navbar.slideUp();
+                }
+            });
+
+        })
+    </script>
+
 </html>
