@@ -1,317 +1,412 @@
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-        <link rel="stylesheet" href="css/swiper.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-        <style>
 
-            #lp-nav {
-                z-index: 1029;
-            }
-            .navbar-light .navbar-nav .nav-link {
-                font-weight: bold;
-                color: rgba(0,0,0,.9);
-            }
-            .navbar-light .navbar-nav .active>.nav-link {
-                background-color: #0D4F8B;
-                color: white
-            }
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #lp-nav {
+            z-index: 1029;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            font-weight: bold;
+            color: rgba(0, 0, 0, .9);
+        }
+
+        .navbar-light .navbar-nav .active>.nav-link {
+            background-color: #0D4F8B;
+            color: white
+        }
 
 
-            .no-gutters {
-                margin-right: 0;
-                margin-left: 0;
-            }
-            .col,
-            .col[class*="col-"] {
-                padding-right: 0;
-                padding-left: 0;
-            }
+        .no-gutters {
+            margin-right: 0;
+            margin-left: 0;
+        }
 
+        .col,
+        .col[class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .img {
+            position: relative;
+            height: 250px;
+            width: 100%;
+            background-image: url('https://d3n8a8pro7vhmx.cloudfront.net/keliiakina/pages/169/attachments/original/1466599396/Aiona_Akina1.png?1466599396');
+            background-size: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        @media (max-width: 425px) {
             .img {
-                position: relative;
-                height: 250px;
-                width: 100%;
-                background-image: url('https://d3n8a8pro7vhmx.cloudfront.net/keliiakina/pages/169/attachments/original/1466599396/Aiona_Akina1.png?1466599396');
-                background-size: cover;
+                height: 200px;
             }
-            .overlay {
-                position: absolute;
-                top: 0;
-                left:0;
-                right:0;
-                bottom:0; 
-            }
-            @media (max-width: 425px) {
-                .img {
-                    height: 200px;
-                }
-            }
-            .bg-primary .overlay {
-                background-color: rgba(13,79,139,0.8);
-            }
-            .bg-secondary .overlay {
-                background-color: rgb(255,25,25,0.8);
-            }
-            .bg-dark .overlay,
-            .bg-black .overlay {
-                background-color: rgb(0,0,0,0.8);
-            }   
+        }
 
-            .bg-primary {
-                background-color: #0D4F8B	 !important;
-            }
-            .bg-secondary {
-                background-color: #ff1919 !important;
-            }
-            .bg-black {
-                background-color:#222;
-            }
-            .card {
-                border-radius: 0 !important;
-            }
-            
-            .swiper-wrapper {
-                height: auto !important;
-            }
+        .bg-primary .overlay {
+            background-color: rgba(13, 79, 139, 0.8);
+        }
 
-            #next,
-            #prev {
-                position: absolute;
-                z-index: 999999;
-                top: 50%;
-            }
-            #next {
-                right: 0;
-                margin-right: 10px;
-            }
-            #prev {
-                left: 0;
-                margin-left: 10px;
+        .bg-secondary .overlay {
+            background-color: rgb(255, 25, 25, 0.8);
+        }
+
+        .bg-dark .overlay,
+        .bg-black .overlay {
+            background-color: rgb(0, 0, 0, 0.8);
+        }
+
+        .bg-primary {
+            background-color: #0D4F8B !important;
+        }
+
+        .bg-secondary {
+            background-color: #ff1919 !important;
+        }
+
+        .bg-black {
+            background-color: #222;
+        }
+
+        .card {
+            border-radius: 0 !important;
+        }
+
+        .swiper-wrapper {
+            height: auto !important;
+        }
+
+        #readMore {
+            width: 4%;
+            position: absolute;
+            bottom: 4%;
+            right: 2%;
+            z-index: 9;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-name: bounce;
+            animation-timing-function: ease;
+            display: none;
+        }
+
+        #readMore:hover {
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
             }
 
-            #banner {
-                width: 100%;
+            20% {
+                transform: translateY(0);
             }
+
+            40% {
+                transform: translateY(-50px);
+            }
+
+            50% {
+                transform: translateY(0);
+            }
+
+            55% {
+                transform: translateY(-7px);
+            }
+
+            60% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        #next,
+        #prev {
+            position: absolute;
+            z-index: 999999;
+            top: 50%;
+        }
+
+        #next {
+            right: 0;
+            margin-right: 10px;
+        }
+
+        #prev {
+            left: 0;
+            margin-left: 10px;
+        }
+
+        #banner {
+            width: 100%;
+        }
+
+        #myVideo {
+            width: 100%;
+            margin-top: -100px;
+        }
+
+        @media (max-width: 425px) {
             #myVideo {
-                width: 100%;
-                margin-top: -100px;
+                margin-top: 0;
             }
-            @media (max-width: 425px) {
-                #myVideo {
-                    margin-top: 0;
-                }
-            }
+        }
+    </style>
+</head>
 
-        </style>
-    </head>
-    <body>
+<body>
 
-        <!-- LANDING PAGE NAV -->
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0,0,0,0)" id="lp-nav">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            
+    <!-- LANDING PAGE NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0,0,0,0)" id="lp-nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active text-uppercase">
-                            <a class="nav-link " href="#">WHY VOTE IN OHA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">ABOUT KELIʻI AKINA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">VIDEOS</a>
-                        </li>                        
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">NEWS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">DONATE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">VOLUNTEER OR GET STUFF</a>
-                        </li>
-                    </ul>
-                </div>
-        
-        </nav>
 
-        <!-- ON SCROLL NAV -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar" style="display:none">
-            <a href="" class="navbar-brand">
-                <img src="img/logo.png" width="150">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="container">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active text-uppercase">
-                            <a class="nav-link " href="#">WHY VOTE IN OHA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">ABOUT KELIʻI AKINA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">VIDEOS</a>
-                        </li>                        
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">NEWS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">DONATE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">VOLUNTEER OR GET STUFF</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>   
-        </nav>
-
-        <div id="banner">
-            <!-- The video -->
-            <video class="lazy" autoplay muted loop id="myVideo" data-poster="img/poster.png">
-                <source data-src="img/For Web-1.webm" type="video/mp4">
-            </video>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active text-uppercase">
+                    <a class="nav-link " href="#">WHY VOTE IN OHA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">ABOUT KELIʻI AKINA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">VIDEOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">DONATE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">VOLUNTEER OR GET STUFF</a>
+                </li>
+            </ul>
         </div>
 
+    </nav>
 
-        <div class="swiper-container">
-            <button class="btn btn-lg btn-outline-light " id="prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="btn btn-lg btn-outline-light " id="next"><i class="fas fa-chevron-right"></i></button>
-            <div class="swiper-wrapper text-white">
-                <div class="card bg-primary border-0 swiper-slide">
-                    <div class="img">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <h1>Lorem Ipsum</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
-                    </div>
+    <!-- ON SCROLL NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar" style="display:none">
+        <a href="" class="navbar-brand">
+            <img src="img/logo.png" width="150">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active text-uppercase">
+                        <a class="nav-link " href="#">WHY VOTE IN OHA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#">ABOUT KELIʻI AKINA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#">VIDEOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#">NEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#">DONATE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#">VOLUNTEER OR GET STUFF</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="banner">
+        <a href="#content1"><img src="img\hand.png" id="readMore" alt=""></a>
+        <!-- The video -->
+        <video class="lazy" autoplay muted loop id="myVideo" data-poster="img/poster.png">
+            <source data-src="img/For Web-1.webm" type="video/mp4">
+        </video>
+    </div>
+
+
+    <div class="swiper-container" id="content1">
+        <button class="btn btn-lg btn-outline-light " id="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn btn-lg btn-outline-light " id="next"><i class="fas fa-chevron-right"></i></button>
+        <div class="swiper-wrapper text-white">
+            <div class="card bg-primary border-0 swiper-slide">
+                <div class="img">
+                    <div class="overlay"></div>
                 </div>
-                <div class="card bg-secondary border-0 swiper-slide">
-                    <div class="img">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <h1>Lorem Ipsum</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
-                    </div>
+                <div class="card-body">
+                    <h1>Lorem Ipsum</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit
+                        nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo
+                        tempora cumque! Illum?</p>
                 </div>
-                <div class="card bg-primary border-0 swiper-slide">
-                    <div class="img">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="card-body rounded-0">
-                        <h1>Lorem Ipsum</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
-                    </div>
+            </div>
+            <div class="card bg-secondary border-0 swiper-slide">
+                <div class="img">
+                    <div class="overlay"></div>
                 </div>
-                <div class="card bg-secondary border-0 swiper-slide">
-                    <div class="img">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <h1>Lorem Ipsum</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
-                    </div>
+                <div class="card-body">
+                    <h1>Lorem Ipsum</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit
+                        nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo
+                        tempora cumque! Illum?</p>
                 </div>
-                <div class="card bg-primary border-0 swiper-slide">
-                    <div class="img">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <h1>Lorem Ipsum</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
-                    </div>
+            </div>
+            <div class="card bg-primary border-0 swiper-slide">
+                <div class="img">
+                    <div class="overlay"></div>
                 </div>
-                <div class="card bg-secondary border-0 swiper-slide">
-                    <div class="img">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <h1>Lorem Ipsum</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo tempora cumque! Illum?</p>
-                    </div>
+                <div class="card-body rounded-0">
+                    <h1>Lorem Ipsum</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit
+                        nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo
+                        tempora cumque! Illum?</p>
+                </div>
+            </div>
+            <div class="card bg-secondary border-0 swiper-slide">
+                <div class="img">
+                    <div class="overlay"></div>
+                </div>
+                <div class="card-body">
+                    <h1>Lorem Ipsum</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit
+                        nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo
+                        tempora cumque! Illum?</p>
+                </div>
+            </div>
+            <div class="card bg-primary border-0 swiper-slide">
+                <div class="img">
+                    <div class="overlay"></div>
+                </div>
+                <div class="card-body">
+                    <h1>Lorem Ipsum</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit
+                        nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo
+                        tempora cumque! Illum?</p>
+                </div>
+            </div>
+            <div class="card bg-secondary border-0 swiper-slide">
+                <div class="img">
+                    <div class="overlay"></div>
+                </div>
+                <div class="card-body">
+                    <h1>Lorem Ipsum</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit
+                        nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo
+                        tempora cumque! Illum?</p>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 
-    <script src="js/swiper.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@13.0.1/dist/lazyload.min.js"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function() {
-            var lazyLoadInstance = new LazyLoad({
-                elements_selector: ".lazy"
-            });
+<script src="js/swiper.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@13.0.1/dist/lazyload.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        var lazyLoadInstance = new LazyLoad({
+            elements_selector: ".lazy"
+        });
 
-            //SWIPER
-            
-            // Fix slidesper view based on screen size
-            clientWidth = $(document).outerWidth();
-            
-            // for mobile
-            if ( clientWidth <= 425 ) {
-                slidesPerView = 1;
-            }
-            // for tablet
-            else if ( clientWidth > 425 && clientWidth <= 768 ) {
-                slidesPerView = 2;
-            }
-            else {
-                slidesPerView = 3;
-            }
+        //SWIPER
 
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: slidesPerView,
-                spaceBetween: 0,
-                simulateTouch: false,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '#next',
-                    prevEl: '#prev',
+        // Fix slidesper view based on screen size
+        clientWidth = $(document).outerWidth();
+
+        // for mobile
+        if (clientWidth <= 425) {
+            slidesPerView = 1;
+        }
+        // for tablet
+        else if (clientWidth > 425 && clientWidth <= 768) {
+            slidesPerView = 2;
+        }
+        else {
+            slidesPerView = 3;
+        }
+
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: slidesPerView,
+            spaceBetween: 0,
+            simulateTouch: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '#next',
+                prevEl: '#prev',
+            }
+        });
+
+        $navbar = $('#navbar');
+
+
+        $(document).scroll(function () {
+            var scrollTop = $(this).scrollTop();
+            var lpNavHeight = $('#lp-nav').outerHeight();
+
+
+            if (clientWidth < 768) {
+                if (scrollTop >= lpNavHeight) {
+                    $navbar.slideDown();
+                } else {
+                    $navbar.slideUp();
                 }
-            });
+            }
+        });
+        if (clientWidth <= 768) {
+            $navbar.slideDown();
+            $(document).off('scroll');
+        }
 
-            $navbar = $('#navbar');
-   
-                   
-            $(document).scroll(function() {
-                var scrollTop = $(this).scrollTop();
-                var lpNavHeight = $('#lp-nav').outerHeight();
-                
+        setTimeout(function () {
+            if (window.scrollY == 0) {
+                $('#readMore').fadeIn(300);
+            }
+        }, 3000);
+        $(window).on('scroll', function () {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop <= 0) {
+            setTimeout(function () {
+                $('#readMore').fadeIn(300);
+            }, 3000);
+        } else {
+            $('#readMore').fadeOut(300);
+        }
+    });
 
-                if ( clientWidth < 768 ) {
-                    if (scrollTop >= lpNavHeight ) {
-                        $navbar.slideDown(); 
-                    } else {
-                        $navbar.slideUp();
-                    }
-                }
-            });
-            if ( clientWidth <= 768 ) {
-                $navbar.slideDown();
-                $(document).off('scroll');
-            }     
-
-        })
-    </script>
+    })
+</script>
 
 </html>
