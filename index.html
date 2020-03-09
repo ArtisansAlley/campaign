@@ -89,9 +89,9 @@
             border-radius: 0 !important;
         }
 
-        .swiper-wrapper {
+        /* .swiper-wrapper {
             height: auto !important;
-        }
+        } */
 
         #readMore {
             width: 4%;
@@ -263,21 +263,19 @@
                     <div class="overlay"></div>
                 </div>
                 <div class="card-body">
-                    <h1>Lorem Ipsum</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit
-                        nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo
-                        tempora cumque! Illum?</p>
+                    <h1>President/CEO of Grassroot Institute of Hawaii</h1>
+                    <p class="lead">A public policy research institution dedicated to the principles of individual
+                        liberty, free markets and limited, accountable government. </p>
                 </div>
             </div>
-            <div class="card bg-secondary border-0 swiper-slide">
+            <div class="card bg-secondary border-0 swiper-slide h-100">
                 <div class="img">
                     <div class="overlay"></div>
                 </div>
-                <div class="card-body">
-                    <h1>Lorem Ipsum</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit
-                        nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo
-                        tempora cumque! Illum?</p>
+                <div class="card-body ">
+                    <h1>Trustee-at-Large in the Office of Hawaiian Affairs</h1>
+                    <p class="lead">A statewide elective position for which he garnered 164,000 votes in the 2016
+                        election</p>
                 </div>
             </div>
             <div class="card bg-primary border-0 swiper-slide">
@@ -285,10 +283,9 @@
                     <div class="overlay"></div>
                 </div>
                 <div class="card-body rounded-0">
-                    <h1>Lorem Ipsum</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit
-                        nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo
-                        tempora cumque! Illum?</p>
+                    <h1>Dr. Akina is a graduate of :</h1>
+                    <p class="lead">Kamehameha Schools, Northwestern University (B.A.)</p>
+                    <p class="lead">University of Hawaii (M.A. and Ph.D.)</p>
                 </div>
             </div>
             <div class="card bg-secondary border-0 swiper-slide">
@@ -296,10 +293,8 @@
                     <div class="overlay"></div>
                 </div>
                 <div class="card-body">
-                    <h1>Lorem Ipsum</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit
-                        nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo
-                        tempora cumque! Illum?</p>
+                    <h1>A member of the Pacific Century Fellows</h1>
+                    <p class="lead">An offshoot of the White House Fellows program</p>
                 </div>
             </div>
             <div class="card bg-primary border-0 swiper-slide">
@@ -307,10 +302,8 @@
                     <div class="overlay"></div>
                 </div>
                 <div class="card-body">
-                    <h1>Lorem Ipsum</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit
-                        nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo
-                        tempora cumque! Illum?</p>
+                    <h1> An expert in East-West philosophy and ethics</h1>
+                    <p class="lead"></p>
                 </div>
             </div>
             <div class="card bg-secondary border-0 swiper-slide">
@@ -318,14 +311,45 @@
                     <div class="overlay"></div>
                 </div>
                 <div class="card-body">
-                    <h1>Lorem Ipsum</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur ab velit
-                        nulla commodi sed id? Atque itaque ratione ab possimus nihil, expedita, ut voluptatem, vel quo
-                        tempora cumque! Illum?</p>
+                    <h1>An adjunct instructor at Hawaii Pacific University.</h1>
+                    <p class="lead">Dr. Akina has lectured at universities in China and the United States</p>
                 </div>
             </div>
         </div>
     </div>
+    <footer>
+    <div class="container my-4" style="height: auto;">
+        <div class="row mt-4">
+            <div class="col-lg-2">
+                <ul class="text-uppercase list-unstyled font-weight-bold">
+                    <a href="" style="color: black;">
+                        <li>Donate</li>
+                    </a>
+                    <a href="" style="color: black;">
+                        <li>Volunteer</li>
+                    </a>
+                    <a href="" style="color: black;">
+                        <li>News</li>
+                    </a>
+                    <a href="" style="color: black;">
+                        <li>Videos</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-lg-8 font-weight-bold">
+                <p>Everyone Can Vote for OHA</p>
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/189825717" width="300" height="160"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-2 ">
+                <p class="font-weight-bold">Social</p>
+                <a href="https://www.facebook.com/AkinaForOHA/"><i class="fab fa-facebook fa-2x"
+                        style="color: black;"></i></a>
+                <i class="fas fa-envelope fa-2x ml-2" data-toggle="tooltip" title="Kelii@keliiAKINA.com" style="color: black;"></i>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 
 <script src="js/swiper.js"></script>
@@ -396,15 +420,15 @@
             }
         }, 3000);
         $(window).on('scroll', function () {
-        var scrollTop = $(this).scrollTop();
-        if (scrollTop <= 0) {
-            setTimeout(function () {
-                $('#readMore').fadeIn(300);
-            }, 3000);
-        } else {
-            $('#readMore').fadeOut(300);
-        }
-    });
+            var scrollTop = $(this).scrollTop();
+            if (scrollTop <= 0) {
+                setTimeout(function () {
+                    $('#readMore').fadeIn(300);
+                }, 3000);
+            } else {
+                $('#readMore').fadeOut(300);
+            }
+        });
 
     })
 </script>
