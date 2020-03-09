@@ -52,6 +52,14 @@
             left: 0;
             right: 0;
             bottom: 0;
+            font-size: 100px !important;
+            text-align: center;
+            padding-top: 15%;
+
+        }
+
+        .overlay i {
+            opacity: 0;
         }
 
         @media (max-width: 425px) {
@@ -60,12 +68,24 @@
             }
         }
 
+        .btn-outline-primary {
+            border-radius: 0;
+            border: #0e2e56 3px solid !important;
+            color: #0e2e56;
+            font-weight: bold;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #0e2e56;
+        }
+
         .bg-primary .overlay {
-            background-color: rgba(13, 79, 139, 0.8);
+            background-color: rgba(14, 46, 86, 0.8);
         }
 
         .bg-secondary .overlay {
-            background-color: rgb(255, 25, 25, 0.8);
+            background-color: rgb(255, 48, 79, 0.8);
+
         }
 
         .bg-dark .overlay,
@@ -74,19 +94,49 @@
         }
 
         .bg-primary {
-            background-color: #0D4F8B !important;
+            background-color: #0e2e56 !important;
         }
 
         .bg-secondary {
-            background-color: #ff1919 !important;
+            background-color: #ff304f !important;
         }
 
         .bg-black {
             background-color: #222;
         }
 
+        .sign-up {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
         .card {
             border-radius: 0 !important;
+            overflow: hidden;
+        }
+
+        .card .img {
+            transition-duration: .3s;
+        }
+
+        .img .overlay i {
+            transition-delay: .3s;
+            transition-duration: .3s;
+        }
+
+        .card:hover>.img {
+            transform: scale(1.1);
+        }
+
+        .card:hover>.img .overlay i {
+            opacity: 1;
+        }
+
+        .card-body {
+            z-index: 2;
         }
 
         /* .swiper-wrapper {
@@ -183,7 +233,6 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active text-uppercase">
@@ -246,7 +295,14 @@
     </nav>
 
     <div id="banner">
+        <!-- The Read More Button -->
         <a href="#content1"><img src="img\hand.png" id="readMore" alt=""></a>
+        <!-- The Sign Up Button-->
+        <div class="sign-up">
+            <button class="btn btn-outline-primary">
+                Sign Up Now!
+            </button>
+        </div>
         <!-- The video -->
         <video class="lazy" autoplay muted loop id="myVideo" data-poster="img/poster.png">
             <source data-src="img/For Web-1.webm" type="video/mp4">
@@ -259,58 +315,70 @@
         <button class="btn btn-lg btn-outline-light " id="next"><i class="fas fa-chevron-right"></i></button>
         <div class="swiper-wrapper text-white">
             <div class="card bg-primary border-0 swiper-slide">
-                <div class="img">
-                    <div class="overlay"></div>
+                <div class="img" style="background-image: url('img/AKINA_4_OHA.jpg')">
+                    <div class="overlay">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body bg-primary">
                     <h1>President/CEO of Grassroot Institute of Hawaii</h1>
                     <p class="lead">A public policy research institution dedicated to the principles of individual
                         liberty, free markets and limited, accountable government. </p>
                 </div>
             </div>
             <div class="card bg-secondary border-0 swiper-slide h-100">
-                <div class="img">
-                    <div class="overlay"></div>
+                <div class="img" style="background-image: url('img/presentation.png')">
+                    <div class="overlay">
+                        <i class="fas fa-building"></i>
+                    </div>
                 </div>
-                <div class="card-body ">
+                <div class="card-body bg-secondary">
                     <h1>Trustee-at-Large in the Office of Hawaiian Affairs</h1>
                     <p class="lead">A statewide elective position for which he garnered 164,000 votes in the 2016
                         election</p>
                 </div>
             </div>
             <div class="card bg-primary border-0 swiper-slide">
-                <div class="img">
-                    <div class="overlay"></div>
+                <div class="img" style="background-image: url('img/graduate.png')">
+                    <div class="overlay">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                 </div>
-                <div class="card-body rounded-0">
+                <div class="card-body bg-primary">
                     <h1>Dr. Akina is a graduate of :</h1>
                     <p class="lead">Kamehameha Schools, Northwestern University (B.A.)</p>
                     <p class="lead">University of Hawaii (M.A. and Ph.D.)</p>
                 </div>
             </div>
             <div class="card bg-secondary border-0 swiper-slide">
-                <div class="img">
-                    <div class="overlay"></div>
+                <div class="img" style="background-image: url('img/lunch.png')">
+                    <div class="overlay">
+                        <i class="fas fa-users"></i>
+                    </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body bg-secondary">
                     <h1>A member of the Pacific Century Fellows</h1>
                     <p class="lead">An offshoot of the White House Fellows program</p>
                 </div>
             </div>
             <div class="card bg-primary border-0 swiper-slide">
-                <div class="img">
-                    <div class="overlay"></div>
+                <div class="img" style="background-image: url('img/radio.png')">
+                    <div class="overlay">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body bg-primary">
                     <h1> An expert in East-West philosophy and ethics</h1>
                     <p class="lead"></p>
                 </div>
             </div>
             <div class="card bg-secondary border-0 swiper-slide">
-                <div class="img">
-                    <div class="overlay"></div>
+                <div class="img" style="background-image: url('img/class.png')">
+                    <div class="overlay">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body bg-secondary">
                     <h1>An adjunct instructor at Hawaii Pacific University.</h1>
                     <p class="lead">Dr. Akina has lectured at universities in China and the United States</p>
                 </div>
@@ -318,38 +386,39 @@
         </div>
     </div>
     <footer>
-    <div class="container my-4" style="height: auto;">
-        <div class="row mt-4">
-            <div class="col-lg-2">
-                <ul class="text-uppercase list-unstyled font-weight-bold">
-                    <a href="" style="color: black;">
-                        <li>Donate</li>
-                    </a>
-                    <a href="" style="color: black;">
-                        <li>Volunteer</li>
-                    </a>
-                    <a href="" style="color: black;">
-                        <li>News</li>
-                    </a>
-                    <a href="" style="color: black;">
-                        <li>Videos</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="col-lg-8 font-weight-bold">
-                <p>Everyone Can Vote for OHA</p>
-                <iframe title="vimeo-player" src="https://player.vimeo.com/video/189825717" width="300" height="160"
-                    frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="col-lg-2 ">
-                <p class="font-weight-bold">Social</p>
-                <a href="https://www.facebook.com/AkinaForOHA/"><i class="fab fa-facebook fa-2x"
-                        style="color: black;"></i></a>
-                <i class="fas fa-envelope fa-2x ml-2" data-toggle="tooltip" title="Kelii@keliiAKINA.com" style="color: black;"></i>
+        <div class="container my-4" style="height: auto;">
+            <div class="row mt-4">
+                <div class="col-lg-2">
+                    <ul class="text-uppercase list-unstyled font-weight-bold">
+                        <a href="" style="color: black;">
+                            <li>Donate</li>
+                        </a>
+                        <a href="" style="color: black;">
+                            <li>Volunteer</li>
+                        </a>
+                        <a href="" style="color: black;">
+                            <li>News</li>
+                        </a>
+                        <a href="" style="color: black;">
+                            <li>Videos</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-lg-8 font-weight-bold">
+                    <p>Everyone Can Vote for OHA</p>
+                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/189825717" width="300" height="160"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="col-lg-2 ">
+                    <p class="font-weight-bold">Social</p>
+                    <a href="https://www.facebook.com/AkinaForOHA/"><i class="fab fa-facebook fa-2x"
+                            style="color: black;"></i></a>
+                    <i class="fas fa-envelope fa-2x ml-2" data-toggle="tooltip" title="Kelii@keliiAKINA.com"
+                        style="color: black;"></i>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 
 <script src="js/swiper.js"></script>
