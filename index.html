@@ -107,7 +107,7 @@
 
         .sign-up {
             position: absolute;
-            bottom: 5%;
+            bottom: 15%;
             left: 50%;
             transform: translateX(-50%);
             z-index: 2;
@@ -146,7 +146,7 @@
         #readMore {
             width: 4%;
             position: absolute;
-            bottom: 4%;
+            bottom: 15%;
             right: 2%;
             z-index: 9;
             animation-duration: 2s;
@@ -221,6 +221,14 @@
                 margin-top: 0;
             }
         }
+
+        #page-content {
+            flex: 1 0 auto;
+        }
+
+        #sticky-footer {
+            flex-shrink: none;
+        }
     </style>
 </head>
 
@@ -294,7 +302,7 @@
         </div>
     </nav>
 
-    <div id="banner">
+    <div id="banner" style="position:relative;">
         <!-- The Read More Button -->
         <a href="#content1"><img src="img\hand.png" id="readMore" alt=""></a>
         <!-- The Sign Up Button-->
@@ -385,40 +393,41 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="container my-4" style="height: auto;">
-            <div class="row mt-4">
-                <div class="col-lg-2">
-                    <ul class="text-uppercase list-unstyled font-weight-bold">
-                        <a href="" style="color: black;">
-                            <li>Donate</li>
-                        </a>
-                        <a href="" style="color: black;">
-                            <li>Volunteer</li>
-                        </a>
-                        <a href="" style="color: black;">
-                            <li>News</li>
-                        </a>
-                        <a href="" style="color: black;">
-                            <li>Videos</li>
-                        </a>
-                    </ul>
+    <div class="d-flex flex-column">
+        <footer id="sticky-footer" class="py-4 bg-dark text-white-50 ">
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-lg-2">
+                        <ul class=" list-unstyled font-weight-bold">
+                            <a href="" style="color: white;">
+                                <li>Donate</li>
+                            </a>
+                            <a href="" style="color: white;">
+                                <li>Volunteer</li>
+                            </a>
+                            <a href="" style="color: white;">
+                                <li>News</li>
+                            </a>
+                            <a href="" style="color: white;">
+                                <li>Videos</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8 font-weight-bold">
+                        <p style="color: white;">Everyone Can Vote for OHA</p>
+                        <iframe title="vimeo-player" src="https://player.vimeo.com/video/189825717" width="300"
+                            height="160" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <p class="font-weight-bold" style="color: white;">Social</p>
+                        <a href="https://www.facebook.com/AkinaForOHA/"><i class="fab fa-facebook fa-2x"
+                                style="color: white;"></i></a>
+                        <i class="fas fa-envelope fa-2x ml-2" data-toggle="tooltip" title="Kelii@keliiAKINA.com"
+                            style="color: white;"></i>
+                    </div>
                 </div>
-                <div class="col-lg-8 font-weight-bold">
-                    <p>Everyone Can Vote for OHA</p>
-                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/189825717" width="300" height="160"
-                        frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="col-lg-2 ">
-                    <p class="font-weight-bold">Social</p>
-                    <a href="https://www.facebook.com/AkinaForOHA/"><i class="fab fa-facebook fa-2x"
-                            style="color: black;"></i></a>
-                    <i class="fas fa-envelope fa-2x ml-2" data-toggle="tooltip" title="Kelii@keliiAKINA.com"
-                        style="color: black;"></i>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 
 <script src="js/swiper.js"></script>
