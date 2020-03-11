@@ -19,10 +19,20 @@ html {
         overflow: hidden;
     }
     #myVideo {
-        width: 300%;
-        margin-left: -100%;
-        margin-top: 0;
+       margin-top: 0 !important;
+       width: 300%;
+       margin-left: -100%;
     }
+    #readMore {
+        width: 10% !important;
+    }
+    /* .sign-up {
+        transform: none;
+        position: static;
+    }
+    .sign-up .btn {
+        width: 100%;
+    } */
 }
 
 /* Navbar */
@@ -37,7 +47,11 @@ html {
     background-color: #0D4F8B;
     color: white
 }
-
+@media (max-width: 425px) {
+    .navbar-brand img {
+        width: 100px !important;
+    }
+}
 
 /* No gutters */
 .no-gutters {
@@ -57,6 +71,10 @@ html {
     width: 100%;
     background-image: url('https://d3n8a8pro7vhmx.cloudfront.net/keliiakina/pages/169/attachments/original/1466599396/Aiona_Akina1.png?1466599396');
     background-size: cover;
+}
+.swiper-slide,
+.swiper-wrapper {
+    height: auto !important;
 }
 @media (max-width: 425px) {
     .img {
