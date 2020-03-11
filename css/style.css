@@ -178,14 +178,14 @@ html {
     position: absolute;
     color: transparent;
     background-size: cover;
-    background-position: center left;
+    background-position: center;
     background-repeat: none;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 24s linear infinite 0s;
 }
 .akina-slideshow span:nth-child(1) {
-    background-image: url("../img/lunch.png");
+    background-image: url("../img/AKINA_4_OHA.jpg");
 }
 .akina-slideshow span:nth-child(2) {
     background-image: url("../img/presentation.png");
@@ -197,6 +197,7 @@ html {
 }
 .akina-slideshow span:nth-child(3) {
     background-image: url("../img/radio.png");
+    background-position: right;
     -webkit-animation-delay: 12s;
     -moz-animation-delay: 12s;
     -o-animation-delay: 12s;
@@ -211,23 +212,7 @@ html {
     -ms-animation-delay: 18s;
     animation-delay: 18s;
  }
- /*
-.akina-slideshow span:nth-child(5) {
-    background-image: url("img/akina4.png");
-    -webkit-animation-delay: 24s;
-    -moz-animation-delay: 24s;
-    -o-animation-delay: 24s;
-    -ms-animation-delay: 24s;
-    animation-delay: 24s;
-}
-.akina-slideshow span:nth-child(6) {
-    background-image: url("img/radio2.png");
-    -webkit-animation-delay: 30s;
-    -moz-animation-delay: 30s;
-    -o-animation-delay: 30s;
-    -ms-animation-delay: 30s;
-    animation-delay: 30s;
-} */
+
 .biography {
     margin: 2% 0%;
 }
@@ -257,16 +242,20 @@ html {
         animation-timing-function: ease-out;
     }
 
-    17% {
-        opacity: 1
+    25% {
+        opacity: 1;
     }
 
-    25% {
-        opacity: 0
+    50%{
+        opacity: 1;
+    }
+
+    75%{
+        opacity:0;
     }
 
     100% {
-        opacity: 0
+        opacity: 0;
     }
 }
 @keyframes bounce {
