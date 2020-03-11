@@ -7,348 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        #lp-nav {
-            z-index: 1029;
-        }
-
-        .navbar-light .navbar-nav .nav-link {
-            font-weight: bold;
-            color: rgba(0, 0, 0, .9);
-        }
-
-        .navbar-light .navbar-nav .active>.nav-link {
-            background-color: #0D4F8B;
-            color: white
-        }
-
-        @media (max-width: 425px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            #myVideo {
-                display: none;
-            }
-
-            #logo-banner {
-                width: 100%;
-                height: 50vh;
-                background-image: url('img/poster.png');
-                background-size: cover;
-                background-position: center;
-            }
-        }
-
-        .no-gutters {
-            margin-right: 0;
-            margin-left: 0;
-        }
-
-        .col,
-        .col[class*="col-"] {
-            padding-right: 0;
-            padding-left: 0;
-        }
-
-        .img {
-            position: relative;
-            height: 250px;
-            width: 100%;
-            background-image: url('https://d3n8a8pro7vhmx.cloudfront.net/keliiakina/pages/169/attachments/original/1466599396/Aiona_Akina1.png?1466599396');
-            background-size: cover;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            font-size: 100px !important;
-            text-align: center;
-            padding-top: 15%;
-
-        }
-
-        .overlay i {
-            opacity: 0;
-        }
-
-        @media (max-width: 425px) {
-            .img {
-                height: 200px;
-            }
-        }
-
-        .text-primary {
-            color: #0e2e56 !important;
-        }
-
-        .btn-outline-primary {
-            border-radius: 0;
-            border: #0e2e56 3px solid !important;
-            color: #0e2e56;
-            font-weight: bold;
-        }
-
-        .btn-outline-primary:hover {
-            background-color: #0e2e56;
-        }
-
-        .bg-primary .overlay {
-            background-color: rgba(14, 46, 86, 0.8);
-        }
-
-        .bg-secondary .overlay {
-            background-color: rgb(255, 48, 79, 0.8);
-
-        }
-
-        .bg-dark .overlay,
-        .bg-black .overlay {
-            background-color: rgb(0, 0, 0, 0.8);
-        }
-
-        .bg-primary {
-            background-color: #0e2e56 !important;
-        }
-
-        .bg-secondary {
-            background-color: #ff304f !important;
-        }
-
-        .bg-black {
-            background-color: #222;
-        }
-
-        .sign-up {
-            position: absolute;
-            bottom: 15%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-        }
-
-        .card {
-            border-radius: 0 !important;
-            overflow: hidden;
-        }
-
-        .card .img {
-            transition-duration: .3s;
-        }
-
-        .img .overlay i {
-            transition-delay: .3s;
-            transition-duration: .3s;
-        }
-
-        .card:hover>.img {
-            transform: scale(1.1);
-        }
-
-        .card:hover>.img .overlay i {
-            opacity: 1;
-        }
-
-        .card-body {
-            z-index: 2;
-        }
-
-        .akina-slideshow span {
-            width: 100%;
-            height: 100vh;
-            left: 2%;
-            position: absolute;
-            color: transparent;
-            background-size: cover;
-            background-position: 50% 50%;
-            background-repeat: none;
-            opacity: 0;
-            z-index: 0;
-            animation: imageAnimation 36s linear infinite 0s;
-        }
-
-        .akina-slideshow span:nth-child(1) {
-            background-image: url("img/akina4.png");
-        }
-
-        .akina-slideshow span:nth-child(2) {
-            background-image: url("img/radio2.png");
-            -webkit-animation-delay: 6s;
-            -moz-animation-delay: 6s;
-            -o-animation-delay: 6s;
-            -ms-animation-delay: 6s;
-            animation-delay: 6s;
-        }
-
-        .akina-slideshow span:nth-child(3) {
-            background-image: url("img/akina4.png");
-            -webkit-animation-delay: 12s;
-            -moz-animation-delay: 12s;
-            -o-animation-delay: 12s;
-            -ms-animation-delay: 12s;
-            animation-delay: 12s;
-        }
-
-        .akina-slideshow span:nth-child(4) {
-            background-image: url("img/radio2.png");
-            -webkit-animation-delay: 18s;
-            -moz-animation-delay: 18s;
-            -o-animation-delay: 18s;
-            -ms-animation-delay: 18s;
-            animation-delay: 18s;
-        }
-
-        .akina-slideshow span:nth-child(5) {
-            background-image: url("img/akina4.png");
-            -webkit-animation-delay: 24s;
-            -moz-animation-delay: 24s;
-            -o-animation-delay: 24s;
-            -ms-animation-delay: 24s;
-            animation-delay: 24s;
-        }
-
-        .akina-slideshow span:nth-child(6) {
-            background-image: url("img/radio2.png");
-            -webkit-animation-delay: 30s;
-            -moz-animation-delay: 30s;
-            -o-animation-delay: 30s;
-            -ms-animation-delay: 30s;
-            animation-delay: 30s;
-        }
-
-        .biography {
-            margin: 2% 0%;
-            height: 100vh;
-        }
-
-        /* .swiper-wrapper {
-            height: auto !important;
-        } */
-
-        #readMore {
-            width: 4%;
-            position: absolute;
-            bottom: 15%;
-            right: 2%;
-            z-index: 9;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-            animation-name: bounce;
-            animation-timing-function: ease;
-            display: none;
-        }
-
-        #readMore:hover {
-            cursor: pointer;
-        }
-
-        @keyframes imageAnimation {
-            0% {
-                opacity: 0;
-                animation-timing-function: ease-in;
-            }
-
-            8% {
-                opacity: 1;
-                animation-timing-function: ease-out;
-            }
-
-            17% {
-                opacity: 1
-            }
-
-            25% {
-                opacity: 0
-            }
-
-            100% {
-                opacity: 0
-            }
-        }
-
-        @keyframes bounce {
-            0% {
-                transform: translateY(0);
-            }
-
-            20% {
-                transform: translateY(0);
-            }
-
-            40% {
-                transform: translateY(-50px);
-            }
-
-            50% {
-                transform: translateY(0);
-            }
-
-            55% {
-                transform: translateY(-7px);
-            }
-
-            60% {
-                transform: translateY(0);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        #next,
-        #prev {
-            position: absolute;
-            z-index: 999999;
-            top: 50%;
-        }
-
-        #next {
-            right: 0;
-            margin-right: 10px;
-        }
-
-        #prev {
-            left: 0;
-            margin-left: 10px;
-        }
-
-        #banner {
-            width: 100%;
-        }
-
-        #myVideo {
-            width: 100%;
-            margin-top: -100px;
-        }
-
-        @media (max-width: 425px) {
-            #myVideo {
-                margin-top: 0;
-            }
-        }
-
-        #page-content {
-            flex: 1 0 auto;
-        }
-
-        #sticky-footer {
-            flex-shrink: none;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <!-- LANDING PAGE NAV -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0,0,0,0)" id="lp-nav">
+    <nav class="navbar navbar-expand-lg navbar-light d-none d-md-block" style="background-color: rgba(0,0,0,0)" id="lp-nav">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -416,6 +81,11 @@
     </nav>
 
     <div id="banner" style="position:relative;">
+        
+        <!-- The video -->
+        <video class="lazy" autoplay muted loop id="myVideo" data-poster="img/poster.png">
+            <source data-src="img/For Web-1.webm" type="video/mp4">
+        </video>
         <!-- The Read More Button -->
         <a href="#content1"><img src="img\hand.png" id="readMore" alt=""></a>
         <!-- The Sign Up Button-->
@@ -424,52 +94,50 @@
                 Sign Up Now!
             </button>
         </div>
-        <!-- The video -->
-        <video class="lazy" autoplay muted loop id="myVideo" data-poster="img/poster.png">
-            <source data-src="img/For Web-1.webm" type="video/mp4">
-        </video>
-
-        <!-- For mobile -->
-        <div id="logo-banner"></div>
     </div>
 
-    <div class="row biography" id="content1">
-        <div class="col col-lg-6">
-            <div class="akina-slideshow">
-                <span>Image 1</span>
-                <span>Image 1</span>
-                <span>Image 1</span>
-                <span>Image 1</span>
-                <span>Image 1</span>
-                <span>Image 1</span>
+    <div class="container-fluid px-0">
+        <div class="row no-gutters" id="content1">
+            <div class="col col-lg-6">
+                <div class="overlay"></div>
+                <div class="akina-slideshow">
+                    <span>Image 1</span>
+                    <span>Image 1</span>
+                    <span>Image 1</span>
+                    <span>Image 1</span>
+                    <!-- <span>Image 1</span>
+                    <span>Image 1</span> -->
+                </div>
             </div>
-        </div>
-        <div class="col col-lg-6">
-            <h1 class="text-center text-primary">What's Great About Akina?</h1>
-            <p class="mt-5 mx-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ipsum a leo molestie
-                vehicula. Aenean velit dui, ornare tempor nulla non, mollis facilisis ante. Sed varius mauris ut iaculis
-                ornare. Duis venenatis purus faucibus, aliquet purus et, dapibus felis. Curabitur a tortor facilisis,
-                consequat nulla quis, posuere dolor. Cras imperdiet mollis est, sed tincidunt leo facilisis sit amet.
-                Vestibulum at molestie lacus. Vestibulum sed dolor pretium neque pulvinar vestibulum. Aliquam eget ipsum
-                quis sem condimentum laoreet. Nulla a lacus at lectus porttitor bibendum sit amet eu tortor. Integer
-                eleifend libero a enim pulvinar mollis. Vestibulum in risus commodo, placerat nulla vel, lobortis eros.
-                Morbi iaculis pulvinar felis, in sagittis purus interdum eget. Quisque sit amet porta justo.
-
-                Nam porttitor sem est, a condimentum ex feugiat ac. Duis sem arcu, gravida et quam et, ultrices
-                dignissim mi. Nunc ornare velit sit amet lectus dictum, sit amet porttitor leo vestibulum. Etiam ac
-                risus eros. Maecenas pharetra laoreet tincidunt. Fusce sit amet iaculis risus, nec bibendum velit. Sed
-                luctus tincidunt diam, ac tincidunt nulla sodales vel. Nulla consectetur est vitae efficitur egestas.
-            </p>
-            <button class="btn btn-outline-primary float-right mt-5 mr-5">
-                Read More
-            </button>
+            <div class="col-12 col-lg-6">
+                <div class="p-4">
+                    <h1 class="text-center text-primary">What's Great About Akina?</h1>
+                    <p class="mt-4 text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque ipsum a leo molestie
+                        vehicula. Aenean velit dui, ornare tempor nulla non, mollis facilisis ante. Sed varius mauris ut iaculis
+                        ornare. Duis venenatis purus faucibus, aliquet purus et, dapibus felis. Curabitur a tortor facilisis,
+                        consequat nulla quis, posuere dolor. Cras imperdiet mollis est, sed tincidunt leo facilisis sit amet.
+                        Vestibulum at molestie lacus. Vestibulum sed dolor pretium neque pulvinar vestibulum. Aliquam eget ipsum
+                        quis sem condimentum laoreet. Nulla a lacus at lectus porttitor bibendum sit amet eu tortor. Integer
+                        eleifend libero a enim pulvinar mollis. Vestibulum in risus commodo, placerat nulla vel, lobortis eros.
+                        Morbi iaculis pulvinar felis, in sagittis purus interdum eget. Quisque sit amet porta justo.
+        
+                        Nam porttitor sem est, a condimentum ex feugiat ac. Duis sem arcu, gravida et quam et, ultrices
+                        dignissim mi. Nunc ornare velit sit amet lectus dictum, sit amet porttitor leo vestibulum. Etiam ac
+                        risus eros. Maecenas pharetra laoreet tincidunt. Fusce sit amet iaculis risus, nec bibendum velit. Sed
+                        luctus tincidunt diam, ac tincidunt nulla sodales vel. Nulla consectetur est vitae efficitur egestas.
+                    </p>
+                    <button class="btn btn-outline-primary float-right m-4">
+                        Read More
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="swiper-container">
-        <button class="btn btn-lg btn-outline-light " id="prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="btn btn-lg btn-outline-light " id="next"><i class="fas fa-chevron-right"></i></button>
+        <!-- <button class="btn btn-lg btn-outline-light " id="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn btn-lg btn-outline-light " id="next"><i class="fas fa-chevron-right"></i></button> -->
         <div class="swiper-wrapper text-white">
             <div class="card bg-primary border-0 swiper-slide">
                 <div class="img" style="background-image: url('img/AKINA_4_OHA.jpg')">
@@ -541,6 +209,7 @@
                 </div>
             </div>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
     <div class="d-flex flex-column">
         <footer id="sticky-footer" class="py-4 bg-black text-white-50 ">
@@ -616,16 +285,18 @@
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: slidesPerView,
             spaceBetween: 0,
-            simulateTouch: false,
+            loop: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
-            navigation: {
-                nextEl: '#next',
-                prevEl: '#prev',
+            pagination: {
+                el: '.swiper-pagination',
             }
         });
+        setInterval(function() {
+            swiper.slideNext();
+        }, 2500)
 
         $navbar = $('#navbar');
 
@@ -634,19 +305,13 @@
             var scrollTop = $(this).scrollTop();
             var lpNavHeight = $('#lp-nav').outerHeight();
 
-
-            if (clientWidth < 768) {
-                if (scrollTop >= lpNavHeight) {
-                    $navbar.slideDown();
-                } else {
-                    $navbar.slideUp();
-                }
+            if (scrollTop > 0) {
+                $navbar.fadeIn();
+            } else {
+                $navbar.fadeOut();
             }
         });
-        if (clientWidth <= 768) {
-            $navbar.slideDown();
-            $(document).off('scroll');
-        }
+
 
         setTimeout(function () {
             if (window.scrollY == 0) {

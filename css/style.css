@@ -1,121 +1,282 @@
-/* 
-#f4f4f4
-#ff7315
-#3a3535
-#232020
-*/
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #b8c6db;
-background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
-}
-p,
-h1,
-h2,
-h3,
-h4,
-h5, {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                            supported by Chrome, Opera and Firefox */
-}
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: 'Squada One',  'arial';
+html {
+    scroll-behavior: smooth;
 }
 
-#navbar {
-    background-color: #f4f4f4;
-    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+/* Landing page */
+.sign-up {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+#myVideo {
+    width: 100%;
+    margin-top: -100px;
+}
+@media (max-width: 425px) {
+    #banner {
+        overflow: hidden;
+    }
+    #myVideo {
+        width: 300%;
+        margin-left: -100%;
+        margin-top: 0;
+    }
+}
+
+/* Navbar */
+#lp-nav {
+    z-index: 1029;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: #232020;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .9);
 }
-.navbar-light .navbar-nav .active .nav-link {
-    color: #ff7315;
+.navbar-light .navbar-nav .active>.nav-link {
+    background-color: #0D4F8B;
+    color: white
+}
+
+
+/* No gutters */
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.col,
+.col[class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* Achievments */
+.img {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    background-image: url('https://d3n8a8pro7vhmx.cloudfront.net/keliiakina/pages/169/attachments/original/1466599396/Aiona_Akina1.png?1466599396');
+    background-size: cover;
+}
+@media (max-width: 425px) {
+    .img {
+        height: 200px;
+    }
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 100px !important;
+    text-align: center;
+    padding-top: 15%;
+
+}
+.overlay i {
+    opacity: 0;
+}
+.card {
+    border-radius: 0 !important;
+    overflow: hidden;
+}
+.card .img {
+    transition-duration: .3s;
+}
+.img .overlay i {
+    transition-delay: .3s;
+    transition-duration: .3s;
+}
+.card:hover>.img {
+    transform: scale(1.1);
+}
+.card:hover>.img .overlay i {
+    opacity: 1;
+}
+.card-body {
+    z-index: 2;
+}
+#next,
+#prev {
+    position: absolute;
+    z-index: 999999;
+    top: 50%;
+}
+#next {
+    right: 0;
+    margin-right: 10px;
+}
+#prev {
+    left: 0;
+    margin-left: 10px;
+}
+
+
+/* Custom classes */
+.text-primary {
+    color: #0e2e56 !important;
+}
+.btn-outline-primary {
+    border-radius: 0;
+    border: #0e2e56 3px solid !important;
+    color: #0e2e56;
     font-weight: bold;
 }
-
-
-#about-us {
-    background-image: url('../img/bg.svg');
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: bottom right;
-    height: 100vh;
+.btn-outline-primary:hover {
+    background-color: #0e2e56;
 }
-#the-team .card{
-    height: 300px;
-    border: 0 !important;
-    border-right: 2px solid white;
+.bg-primary .overlay {
+    background-color: rgba(14, 46, 86, 0.8);
 }
-#the-team .name {
-    position: absolute;
+.bg-secondary .overlay {
+    background-color: rgb(255, 48, 79, 0.8);
 }
-
-
-#the-team .card-body {
-    background-size: cover;
-    transition: all 0.5s linear;
-    cursor: pointer;
-}
-
-#nikko {
-    background-image: url('../img/team/nikko-orange.jpg');
-}
-#darnell {
-    background-image: url('../img/team/darnell-orange.jpg');
-}
-#jeremiah {
-    background-image: url('../img/team/jeremiah-orange.jpg');
-}
-
-
-
-#nikko:hover {
-    background-image: url('../img/team/nikko.jpg');
-}
-#darnell:hover {
-    background-image: url('../img/team/darnell.jpg');
-}
-#jeremiah:hover {
-    background-image: url('../img/team/jeremiah.jpg');
-}
-
-@media screen and (max-width: 576px) {
-    #about-us {
-        background-size: 80%;
-    }   
-}
-.bg-dark {
-    background-color: #232020;
+.bg-dark .overlay,
+.bg-black .overlay {
+    background-color: rgb(0, 0, 0, 0.8);
 }
 .bg-primary {
-    background-color: #ff7315 !important;
+    background-color: #0e2e56 !important;
 }
-.text-primary {
-    color: #ff7315 !important;
+.bg-secondary {
+    background-color: #ff304f !important;
 }
-.text-secondary {
-    color: #3a3535 !important;
-}
-.bg-transparent {
-    background-color: transparent !important;
+.bg-black {
+    background-color: #222;
 }
 
-.text-anim {
+/* Biography */
+#content1 {
+    position: relative;
 }
+#content1 .overlay {
+    background-color: rgba(14, 46, 86, 0.8);
+    z-index: 1;
+}
+.akina-slideshow span {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    color: transparent;
+    background-size: cover;
+    background-position: center left;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+.akina-slideshow span:nth-child(1) {
+    background-image: url("../img/lunch.png");
+}
+.akina-slideshow span:nth-child(2) {
+    background-image: url("../img/presentation.png");
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.akina-slideshow span:nth-child(3) {
+    background-image: url("../img/radio.png");
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.akina-slideshow span:nth-child(4) {
+    background-image: url("../img/lunch.png");
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+ }
+ /*
+.akina-slideshow span:nth-child(5) {
+    background-image: url("img/akina4.png");
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.akina-slideshow span:nth-child(6) {
+    background-image: url("img/radio2.png");
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+} */
+.biography {
+    margin: 2% 0%;
+}
+#readMore {
+    width: 4%;
+    position: absolute;
+    bottom: 15%;
+    right: 2%;
+    z-index: 9;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    display: none;
+}
+#readMore:hover {
+    cursor: pointer;
+}
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
 
-#logo {
-    width: 50px;
-    height: auto;
-    display: block;
-    margin: 0 auto 0 auto;
+    8% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+
+    17% {
+        opacity: 1
+    }
+
+    25% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-50px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    55% {
+        transform: translateY(-7px);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
